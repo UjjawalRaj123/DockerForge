@@ -1,0 +1,15 @@
+services:
+  dockerforge:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # NOTE: The config.json mount has been removed!
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DOCKER_CONTEXT=default
+      # Add these two new variables for native login
+      - DOCKER_HUB_USER=${DOCKER_HUB_USER}
+      - DOCKER_HUB_TOKEN=${DOCKER_HUB_TOKEN}
+    restart: unless-stopped
