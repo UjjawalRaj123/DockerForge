@@ -8,7 +8,7 @@
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/yourusername/dockerforge.git
+https://github.com/UjjawalRaj123/DockerForge.git
 cd dockerforge
 
 # 2. Build the DockerForge image
